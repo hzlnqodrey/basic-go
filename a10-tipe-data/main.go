@@ -13,4 +13,10 @@ func main() {
 
 	fmt.Printf("bilangan desimal: %f\n", decimalNumber)
 	fmt.Printf("bilangan desimal: %.3f\n", decimalNumber)
+
+	// boolean
+
+	var exist bool = true
+
+	fmt.Printf("exist? %t \n", exist)
 }
