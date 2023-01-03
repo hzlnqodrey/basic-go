@@ -57,4 +57,37 @@ func main() {
 	fmt.Println("numbers1", numbers1)
 	fmt.Println("numbers2", numbers2)
 
+
+	// array for loop
+	var buah = [5]string{
+		"anggur",
+		"tomat",
+		"pomegranate",
+		"cherry",
+		"berry",
+	}
+
+	for i := 0; i < len(buah); i++ {
+		fmt.Printf("elemen %d: %s\n", i+1, buah[i])
+	}
+
+	// array for-range
+	var fruits5 = [4]string{"apple", "grape", "banana", "melon"}
+
+	for i, fruit := range fruits5 {
+		fmt.Printf("elemen %d: %s\n", i+1, fruit)
+	}
+
+	// array for-range no index [i]
+	var fruits6 = [4]string{"apple", "grape", "banana", "melon"}
+
+	for _, fruit := range fruits6 {
+		fmt.Printf("elemen: %s\n", fruit)
+	}
+
+	// Alokasi Elemen Array Menggunakan Keyword
+	var benda = make([]string, 2)
+
+	benda[0] = "meja"
+	benda[1] = "bangku"
 }
