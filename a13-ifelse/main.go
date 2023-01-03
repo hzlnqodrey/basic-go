@@ -28,4 +28,16 @@ func main() {
 	}
 
 	// switch case
+	var point3 uint = 6
+
+	switch point3 {
+	case 8:
+		fmt.Printf("perfect")
+	case 7:
+		fmt.Printf("awesome")
+	case 6:
+		fmt.Printf("not bad")
+	default:
+		fmt.Printf("gg")
+	}
 }
