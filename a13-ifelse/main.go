@@ -17,6 +17,15 @@ func main() {
 	}
 
 	// variable temporary
+	var point2 = 8900.0
+
+	if percent := point2 / 100; percent >= 100 {
+		fmt.Printf("%.1f%s Perfect!\n", percent, "%")
+	} else if percent >= 70 {
+		fmt.Printf("%.1f%s Good!\n", percent, "%")
+	} else {
+		fmt.Printf("%.1f%s Not Bad!\n", percent, "%")
+	}
 
 	// switch case
 }
