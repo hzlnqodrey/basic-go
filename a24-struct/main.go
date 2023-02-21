@@ -16,13 +16,24 @@ import (
 
 // 8 - Nested Struct
 type student struct {
-	person struct {
-		name string
-		age int
+	person struct { // 10 - tag property
+		name string `tag1`
+		age int `tag2`
 	}
 	grade int
 	hobbies []string
 }
+
+// 9 - Horizontal Struct
+// type person struct { name string; age int; hobbies []string}
+
+// 11 - Type Alias
+type Person struct {
+	name string
+	age int
+}
+
+type People = Person
 
 func main() {
 
@@ -126,20 +137,34 @@ func main() {
 	// }
 
 	// 7 - Inisialisasi Slice Anonymous Struct
-	var allStudents = []struct{
-		person
-		grade int
-	}{
-		{person: person{"Hazlan", 23}, grade: 100},
-		{person: person{"Rivano", 21}, grade: 85},
-		{person: person{"Riko", 30}, grade: 100000},
-	}
+	// var allStudents = []struct{
+	// 	person
+	// 	grade int
+	// }{
+	// 	{person: person{"Hazlan", 23}, grade: 100},
+	// 	{person: person{"Rivano", 21}, grade: 85},
+	// 	{person: person{"Riko", 30}, grade: 100000},
+	// }
 
-	for _, student := range allStudents {
-		fmt.Println(student.name)
-		fmt.Println(student.age)
-		fmt.Println(student.grade)
-	}
+	// for _, student := range allStudents {
+	// 	fmt.Println(student.name)
+	// 	fmt.Println(student.age)
+	// 	fmt.Println(student.grade)
+	// }
 
-	// 8 - Nested Struct
+	// // 8 - Nested Struct (diatas)
+
+	// // 9 - Struct Horizontal
+	// var p1 = struct {name string, age int} {age: 21, name: "Hazlan"}
+	// var p2 = struct {name string, age int} {"Rivano", 35}
+
+	// 11 - Type Alias
+	var p1 = Person{"Rivano", 22}
+	fmt.Println(p1)
+	
+	var p2 = People{"Hazlan", 23}
+	fmt.Println(p2)
+
+	person := Person{"wick", 21}
+	fmt.Println(People(person))
 }
