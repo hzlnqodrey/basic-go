@@ -46,10 +46,26 @@ func main() {
 	// fmt.Println("student 2, name: ", s2.name)
 
 	// 3 - Embedded Struct
-	var s1 = student{}
-	s1.name = "Hazlan"
-	s1.age = 22
-	s1.grade = 80
+	// var s1 = student{}
+	// s1.name = "Hazlan"
+	// s1.age = 22
+	// s1.grade = 80
+
+	// fmt.Println("Name: ", s1.name)
+	// fmt.Println("Age: ", s1.age)
+	// fmt.Println("Age: ", s1.person.age)
+	// fmt.Println("Grade: ", s1.grade)
+
+	// 4 - Pengisian Sub-struct
+	var p1 = person{
+		name: "Hazlan",
+		age: 22,
+	}
+
+	var s1 = student{
+		person: p1,
+		grade: 85,
+	}
 
 	fmt.Println("Name: ", s1.name)
 	fmt.Println("Age: ", s1.age)
