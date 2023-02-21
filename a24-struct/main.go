@@ -104,13 +104,29 @@ func main() {
 	// fmt.Println("Grade: ", s2.grade)
 
 	// 6 - Slice and Struct Collab
-	var allStudents = []person{
-		{name: "Hazlan", age: 23},
-		{name: "Rivano", age: 21},
-		{name: "Riko", age: 21},
+	// var allStudents = []person{
+	// 	{name: "Hazlan", age: 23},
+	// 	{name: "Rivano", age: 21},
+	// 	{name: "Riko", age: 21},
+	// }
+
+	// for _, student := range allStudents {
+	// 	fmt.Println(student.name, " age is ", student.age)
+	// }
+
+	// 7 - Inisialisasi Slice Anonymous Struct
+	var allStudents = []struct{
+		person
+		grade int
+	}{
+		{person: person{"Hazlan", 23}, grade: 100},
+		{person: person{"Rivano", 21}, grade: 85},
+		{person: person{"Riko", 30}, grade: 100000},
 	}
 
 	for _, student := range allStudents {
-		fmt.Println(student.name, " age is ", student.age)
+		fmt.Println(student.name)
+		fmt.Println(student.age)
+		fmt.Println(student.grade)
 	}
 }
