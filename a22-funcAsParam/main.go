@@ -5,6 +5,9 @@ import (
 	"strings"
 )
 
+// Alias fungsi
+type FilterCallback func(string) bool
+
 func main() {
 	
 	var data = []string{
@@ -33,7 +36,7 @@ func main() {
 	fmt.Printf("Data Filter huruf \t\t: %v\n", contains5)
 }
 
-func filtered(data []string, callback func(string) bool) []string {
+func filtered(data []string, callback FilterCallback) []string {
 	var result []string
 
 	for _, each := range data {
