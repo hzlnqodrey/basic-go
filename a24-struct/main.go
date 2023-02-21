@@ -73,20 +73,44 @@ func main() {
 	// fmt.Println("Grade: ", s1.grade)
 
 	// 5 - Anonymous Struct
-	var s1 = struct{
-		person
-		grade int
-	}{}
+	// var s1 = struct{
+	// 	person
+	// 	grade int
+	// }{}
 
-	s1.person = person{"Hazlan", 23}
-	s1.grade = 100
+	// s1.person = person{"Hazlan", 23}
+	// s1.grade = 100
 
-	fmt.Println("name  :", s1.person.name)
-    fmt.Println("age   :", s1.person.age)
-    fmt.Println("grade :", s1.grade)
+	// fmt.Println("name  :", s1.person.name)
+    // fmt.Println("age   :", s1.person.age)
+    // fmt.Println("grade :", s1.grade)
 
-	fmt.Println("Name: ", s1.name)
-	fmt.Println("Age: ", s1.age)
-	fmt.Println("Age: ", s1.person.age)
-	fmt.Println("Grade: ", s1.grade)
+	// fmt.Println("Name: ", s1.name)
+	// fmt.Println("Age: ", s1.age)
+	// fmt.Println("Age: ", s1.person.age)
+	// fmt.Println("Grade: ", s1.grade)
+
+	// var s2 = struct {
+	// 	person
+	// 	grade int
+	// }{
+	// 	person: person{"Rivano", 21},
+	// 	grade: 95,
+	// }
+
+	// fmt.Println("Name: ", s2.name)
+	// fmt.Println("Age: ", s2.age)
+	// fmt.Println("Age: ", s2.person.age)
+	// fmt.Println("Grade: ", s2.grade)
+
+	// 6 - Slice and Struct Collab
+	var allStudents = []person{
+		{name: "Hazlan", age: 23},
+		{name: "Rivano", age: 21},
+		{name: "Riko", age: 21},
+	}
+
+	for _, student := range allStudents {
+		fmt.Println(student.name, " age is ", student.age)
+	}
 }
