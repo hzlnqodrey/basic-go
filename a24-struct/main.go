@@ -8,10 +8,10 @@ type person struct {
 	name string
 	age int
 }
-type student struct {
-	grade int
-	person
-}
+// type student struct {
+// 	grade int
+// 	person
+// }
 
 func main() {
 
@@ -57,15 +57,33 @@ func main() {
 	// fmt.Println("Grade: ", s1.grade)
 
 	// 4 - Pengisian Sub-struct
-	var p1 = person{
-		name: "Hazlan",
-		age: 22,
-	}
+	// var p1 = person{
+	// 	name: "Hazlan",
+	// 	age: 22,
+	// }
 
-	var s1 = student{
-		person: p1,
-		grade: 85,
-	}
+	// var s1 = student{
+	// 	person: p1,
+	// 	grade: 85,
+	// }
+
+	// fmt.Println("Name: ", s1.name)
+	// fmt.Println("Age: ", s1.age)
+	// fmt.Println("Age: ", s1.person.age)
+	// fmt.Println("Grade: ", s1.grade)
+
+	// 5 - Anonymous Struct
+	var s1 = struct{
+		person
+		grade int
+	}{}
+
+	s1.person = person{"Hazlan", 23}
+	s1.grade = 100
+
+	fmt.Println("name  :", s1.person.name)
+    fmt.Println("age   :", s1.person.age)
+    fmt.Println("grade :", s1.grade)
 
 	fmt.Println("Name: ", s1.name)
 	fmt.Println("Age: ", s1.age)
