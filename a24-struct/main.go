@@ -4,14 +4,25 @@ import (
 	"fmt"
 )
 
-type person struct {
-	name string
-	age int
-}
+// type person struct {
+// 	name string
+// 	age int
+// }
+
 // type student struct {
 // 	grade int
 // 	person
 // }
+
+// 8 - Nested Struct
+type student struct {
+	person struct {
+		name string
+		age int
+	}
+	grade int
+	hobbies []string
+}
 
 func main() {
 
@@ -129,4 +140,6 @@ func main() {
 		fmt.Println(student.age)
 		fmt.Println(student.grade)
 	}
+
+	// 8 - Nested Struct
 }
