@@ -1,5 +1,11 @@
 package main
 
+import (
+	. "belajar-golang-level-akses/library"
+	f "fmt"
+)
+
 func main() {
-	SayHello("Hazlan")
+	f.Printf("Name:  %s\n", Student.Name)
+	f.Printf("Grade:  %d\n", Student.Grade)
 }
