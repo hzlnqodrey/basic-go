@@ -79,5 +79,13 @@ func main() {
 	}
 
 	// Dynamic Array with Interface
-	// var arrAsal = []interface
+	var arrAsal = []interface{}{
+		map[string]interface{}{"name": "strawberry", "total": 12},
+		[]string{"manggo", "melon", "orange"},
+		"sayuran",
+	}
+
+	for _, each := range arrAsal {
+		fmt.Println(each)
+	}
 }
