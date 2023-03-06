@@ -66,4 +66,18 @@ func main() {
 	var tampung = secret2.(*person)
 	fmt.Println(tampung.name)
 	fmt.Println(tampung.age)
+
+	// Dynamic Value Map
+	var people = []map[string]interface{}{
+		{"Nama": "Hazlan", "Umur": 23},
+		{"Nama": "Rivano", "Umur": 21},
+		{"Nama": "Riko", "Umur": 22},
+	}
+
+	for _, peep := range people {
+		fmt.Println(peep["Nama"], "  :  ", peep["Umur"])
+	}
+
+	// Dynamic Array with Interface
+	// var arrAsal = []interface
 }
