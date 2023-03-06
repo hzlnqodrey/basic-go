@@ -5,6 +5,11 @@ import (
 	"strings"
 )
 
+type person struct {
+	name string
+	age int
+}
+
 func main() {
 
 	var secret interface{}
@@ -54,4 +59,10 @@ func main() {
 	benda = []string{"Kursi", "Meja", "PC"}
 	things := strings.Join(benda.([]string), ", ")
 	fmt.Println(things, " are my favorite things")
+
+	// === Interface Casting Object
+	var secret2 interface{} = &person{"Hazlan", 23}
+	
+	var name = secret2.(*person).name
+	fmt.Println(name)
 }
