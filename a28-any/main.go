@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 func main() {
@@ -39,4 +40,18 @@ func main() {
 	}
 
 	fmt.Println(data2["Nama"], data2["Grade"], data2["Breakfast"])
+
+	// Casting Variable Any
+
+	var benda interface{}
+
+	// Casting to INT
+	benda = 2
+	var multipled int = benda.(int) * 10
+	fmt.Println("2 dikali sepuluh sama dengan", multipled)
+
+	// Casting to Array of String
+	benda = []string{"Kursi", "Meja", "PC"}
+	things := strings.Join(benda.([]string), ", ")
+	fmt.Println(things, " are my favorite things")
 }
