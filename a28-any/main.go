@@ -63,6 +63,7 @@ func main() {
 	// === Interface Casting Object
 	var secret2 interface{} = &person{"Hazlan", 23}
 	
-	var name = secret2.(*person).name
-	fmt.Println(name)
+	var tampung = secret2.(*person)
+	fmt.Println(tampung.name)
+	fmt.Println(tampung.age)
 }
