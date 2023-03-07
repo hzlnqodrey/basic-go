@@ -28,11 +28,28 @@ func (s *student) getPropertyInfo() {
 	}
 }
 
+// 4 - Reflect get Info from Object Method
+func (s *student) SetName(name string) {
+	s.Name = name
+}
+
 func main() {
 
 	// 3 - Reflect Access Object Property
 	var s1 = &student{Name: "Hazlan", Grade: 85}
 	s1.getPropertyInfo()
+	fmt.Println("Nama sblm: ", s1.Name)
+
+	// 4 - Reflect get Info from Object Method
+	var studRefVal = reflect.ValueOf(s1)
+	var methodStudent = studRefVal.MethodByName("SetName")
+
+	methodStudent.Call([]reflect.Value{
+		reflect.ValueOf("Hazlan Qodrey"),
+	})
+
+	fmt.Println("Nama ssdh: ", s1.Name)
+	fmt.Println(" ")
 
 	// 1 -  Introduction Reflect - ReflectValueOf() dan Reflect.Type()
 	var number int = 23
