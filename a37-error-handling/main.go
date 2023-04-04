@@ -1,23 +1,29 @@
 package main
 
 import (
+	"errors"
 	"fmt"
-	"strconv"
+	"strings"
 )
 
+// 2 - Custom Error
+func validate(input string) (bool, error) {
+	if strings.TrimSpace(input) == "" {
+		return false, errors.New("cannot be empty")
+	}
+
+	return true, nil
+}
+
 func main() {
-	var input string
-	fmt.Println("inputkan angka")
-	fmt.Scanln(&input)
+	var name string
+	fmt.Println("Type your name: ")
+	fmt.Scanln(&name)
 
-	var number int
-	var err error
-	number, err = strconv.Atoi(input)
-
-	if err == nil {
-		fmt.Println(number, "  is a number")
+	if valid, err := validate(name); valid {
+		fmt.Println("Hai", name)
 	} else {
-		fmt.Println(number, "  is not a number")
-		fmt.Println(err.Error())
+		panic(err.Error())
+		fmt.Println("end")
 	}
 }
