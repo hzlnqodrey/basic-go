@@ -27,5 +27,9 @@ func main() {
 	// %c - STRING UNICODE
 	fmt.Printf("%c\n", 1400)
 	fmt.Printf("%c\n", 1235)
-
+	
+	// %d - STRING NUMERIK BASIS 10
+	fmt.Printf("%d\n", 1235)
+	fmt.Printf("%d\n", data.age)
+	
 }
