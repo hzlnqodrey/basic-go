@@ -5,23 +5,27 @@ import (
 )
 
 type student struct {
-	name		string	
-	height		float64
-	age			int32
-	isGraduated	bool
-	hobbies		[]string
+	name        string
+	height      float64
+	age         int32
+	isGraduated bool
+	hobbies     []string
 }
 
-func main(){
+func main() {
 	var data = student{
-		name: "wick",
-		height: 182.5,
-		age: 26,
+		name:        "wick",
+		height:      182.5,
+		age:         26,
 		isGraduated: false,
-		hobbies: []string{"eating", "sleeping"},
+		hobbies:     []string{"eating", "sleeping"},
 	}
 
 	// %b - STRING NUMERIK BINER
 	fmt.Printf("%b\n", data.age)
-	
+
+	// %c - STRING UNICODE
+	fmt.Printf("%c\n", 1400)
+	fmt.Printf("%c\n", 1235)
+
 }
