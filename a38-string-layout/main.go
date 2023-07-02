@@ -55,4 +55,7 @@ func main() {
 
 	// %p - FORMAT POINTER
 	fmt.Printf("%p\n", &data.name)
+
+	fmt.Printf("%q\n", `" name \ height "`)
+	// "\" name \\ height \""
 }
