@@ -12,4 +12,6 @@ func main(){
 	var time2 = time.Date(2023, 7, 12, 11, 27, 10, 0, time.UTC)
 	fmt.Printf("time %v\n", time2)
 
+	var now = time.Now()
+	fmt.Println("year:", now.Year(), "month:", now.Month()) 
 }
