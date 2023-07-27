@@ -34,7 +34,7 @@ func main() {
 	// var fruits2 [4]string
 
 	// // cara horizontal
-	// fruits2  = [4]string{"apple", "grape", "banana", "melon"}
+	// fruits2  = [4]string{"apple", "grape", "banana", "meemelon"}
 
 	// // cara vertikal
 	// fruits2  = [4]string{
