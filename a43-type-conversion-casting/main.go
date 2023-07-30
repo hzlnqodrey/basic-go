@@ -69,4 +69,57 @@ func main() {
 	var b2 = false
 	var s9 = strconv.FormatBool(b2)
 	fmt.Println(s9)
+
+	// CASTING
+	// Casting Literal (just use method of the type)
+	var f3 float32 = float32(52.01)
+	fmt.Println(f3)
+
+	// Casting string to byte to string
+	var s10 = "text"
+	var b = []byte(s10)
+	fmt.Printf("%d %d %d %d \n", b[0], b[1], b[2], b[3])
+
+	var byte1 = []byte{116, 101, 120, 116}
+	var s11 = string(byte1)
+	fmt.Printf("%s \n", s11)
+
+	// Casting string <-> int
+	var c int64 = int64('h')
+	fmt.Println(c) // 104
+
+	var d string = string(104)
+	fmt.Println(d) // h
+
+	// Type Assertions Pada Interface Kosong
+	var data  = map[string]interface{}{
+		"nama" : "Hazlan",
+		"umur" : 123,
+		"tinggi" : 174.1,
+		"isMale" : true,
+		"hobby" : []string{"coding", "reading"},
+	}
+
+	fmt.Println(data["nama"].(string))
+	fmt.Println(data["umur"].(int))
+	fmt.Println(data["tinggi"].(float64))
+	fmt.Println(data["isMale"].(bool))
+	fmt.Println(data["hobby"].([]string))
+
+	for _, val := range data {
+		switch val.(type) {
+		case string:
+			fmt.Println(val.(string))
+		case int:
+			fmt.Println(val.(int))
+		case float64:
+			fmt.Println(val.(float64))
+		case bool:
+			fmt.Println(val.(bool))
+		case []string:
+			fmt.Println(val.([]string))
+		default:
+			fmt.Println(val.(int))
+		}
+	}
 }
