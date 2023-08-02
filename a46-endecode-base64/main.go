@@ -42,4 +42,14 @@ func main() {
 	}
 	fmt.Println("Decoding", string(decoding))
 
+
+	// ENCODE and DECODE URL
+	var URL = "https://hzlnqodrey.com"
+	fmt.Println("\nURL: ", URL)
+	
+	var encodingURL = base64.URLEncoding.EncodeToString([]byte(URL))
+	fmt.Println("ENCODE URL: ", string(encodingURL))
+
+	var decodingURL, _ = base64.URLEncoding.DecodeString(encodingURL)
+	fmt.Println("DECODE URL", string(decodingURL))
 }	
