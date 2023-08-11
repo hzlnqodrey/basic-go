@@ -1,2 +1,0 @@
-hello world
-Bab A50 - File Golang Basic Tutorial
